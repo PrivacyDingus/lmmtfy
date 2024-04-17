@@ -25,7 +25,7 @@ $(function() {
     
     var stepTimeout, typeInterval;
 
-    /* 获取并解析查询参数。参数加 Base64 编码是防止别人直接从链接中猜出了结果，而拒绝点击 */ 
+    /* Get and parse the query parameters. The Base64 encoding of the parameters prevents people from guessing the result directly from the link and refusing to click on it. */ 
     var query = $.getUrlParam('q');
     if(!!query) {
         try {
@@ -35,19 +35,19 @@ $(function() {
         }
     }
 
-    /* 有参数，启动教程 */
+    /* Parameters available, start tutorial */
     if(!!query) {
-        $tips.html('Time for a lesson in Mojeeking');
+        $tips.html('<strong>Time for a lesson in Mojeeking</strong>');
         $stop.fadeIn();
 
         stepTimeout = setTimeout(function() {
-            $tips.html('1. Type the question');
+            $tips.html('1. Click in the search box');
 
             $arrow.removeClass('active').show().animate({
                 left: $kw.offset().left + 20 + 'px',
                 top: ($kw.offset().top + $kw.outerHeight() / 2) + 'px'
             }, 2000, function () {
-                $tips.html('2. Click on the search button');
+                $tips.html('2. Type in the query');
                 $arrow.addClass('active');
 
                 stepTimeout = setTimeout(function() {
@@ -58,7 +58,7 @@ $(function() {
                         $kw.val(query.substr(0, i));
                         if (++i > query.length) {
                             clearInterval(typeInterval);
-                            $tips.html('3. And then we go to MOJEEK');
+                            $tips.html('3. And then we click to search on MOJEEK');
 
                             $arrow.removeClass('active').fadeIn().animate({
                                 left: $searchSubmit.offset().left + $searchSubmit.width()  / 2 + 'px',
@@ -82,7 +82,7 @@ $(function() {
         }, 1000);
     }
 
-    /* 自己人，停下 */ 
+    /* The button for exiting the process */ 
     $stop.click(function() {
         clearTimeout(stepTimeout);
         clearInterval(typeInterval);
@@ -90,10 +90,10 @@ $(function() {
         $arrow.stop().hide();
         $kw.val(query);
         query = false;
-        $tips.html('输入一个问题，然后按 Google 搜索');
+        $tips.html('Enter a question and press Mojeek to Search');
     });
 
-    /* 提交 */
+    /* Submit */
     $('#search').on('click', function() {
         if(!!query) return false;
 
