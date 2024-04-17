@@ -37,17 +37,17 @@ $(function() {
 
     /* 有参数，启动教程 */
     if(!!query) {
-        $tips.html('让我来教你正确的打开方式');
+        $tips.html('Time for a lesson in Mojeeking');
         $stop.fadeIn();
 
         stepTimeout = setTimeout(function() {
-            $tips.html('1、找到输入框并选中');
+            $tips.html('1. Type the question');
 
             $arrow.removeClass('active').show().animate({
                 left: $kw.offset().left + 20 + 'px',
                 top: ($kw.offset().top + $kw.outerHeight() / 2) + 'px'
             }, 2000, function () {
-                $tips.html('2、输入你要找的内容');
+                $tips.html('2. Click on the search button');
                 $arrow.addClass('active');
 
                 stepTimeout = setTimeout(function() {
@@ -58,13 +58,13 @@ $(function() {
                         $kw.val(query.substr(0, i));
                         if (++i > query.length) {
                             clearInterval(typeInterval);
-                            $tips.html('3、点击下“Google 搜索”按钮');
+                            $tips.html('3. And then we go to MOJEEK');
 
                             $arrow.removeClass('active').fadeIn().animate({
                                 left: $searchSubmit.offset().left + $searchSubmit.width()  / 2 + 'px',
                                 top:  $searchSubmit.offset().top  + $searchSubmit.height() / 2 + 'px'
                             }, 1000, function () {
-                                $tips.html('<strong>怎么样，学会了吗？</strong>');
+                                $tips.html("<strong>Breaking out of Big Tech isn't so hard is it？</strong>");
                                 $arrow.addClass('active');
 
                                 stepTimeout = setTimeout(function () {
@@ -115,7 +115,7 @@ $(function() {
         $tips.html('<span style="color: #4caf50">Copied to clipboard, now send it to the seeker!</span>');
     });
     clipboard.on('error', function(e) {
-        $tips.html('<span style="color: red">复制失败，请手动复制</span>');
+        $tips.html('<span style="color: red">That did not work, sorry!</span>');
     });
 
     /* 预览 */ 
