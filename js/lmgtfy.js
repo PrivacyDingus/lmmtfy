@@ -3,12 +3,12 @@
  * 转载或使用时，还请保留以上信息，谢谢！
  */ 
 
-/* 低版本 IE polyfill */ 
+/* Low version IE polyfill */ 
 if(!window.location.origin) {
     window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
 }
 
-/* 扩展一个getUrlParam的方法 */
+/* Extending a getUrlParam method */
 $.getUrlParam = function(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
@@ -99,7 +99,7 @@ $(function() {
 
         var question = $.trim($kw.val());
         if(!question) {
-            $tips.html('<span style="color: red">搜了个寂寞？</span>');
+            $tips.html('<span style="color: red">Looking for something？</span>');
             $kw.val('');
         } else {
             $tips.html("↓↓↓ Copy this and send it to the person you''re Mojeek'ing for");
@@ -109,7 +109,7 @@ $(function() {
         return false;
     });
 
-    /* 复制结果 */ 
+    /* Get results */ 
     var clipboard = new ClipboardJS('[data-clipboard-target]');
     clipboard.on('success', function(e) {
         $tips.html('<span style="color: #4caf50">Copied to clipboard, now send it to the seeker!</span>');
@@ -118,7 +118,7 @@ $(function() {
         $tips.html('<span style="color: red">That did not work, sorry!</span>');
     });
 
-    /* 预览 */ 
+    /* Preview */ 
     $('#preview').click(function() {
         var link = $urlOutput.val();
         if (!!link) {
@@ -126,7 +126,7 @@ $(function() {
         }
     });
 
-    /* 手气不错 */ 
+    /* Search function */ 
     $('#search2').on('click', function(){
         if ($(".search-text").attr("data-site") == "google") {
             window.location = 'https://www.mojeek.com/search?q=' + encodeURIComponent($('#kw').val());
@@ -136,7 +136,7 @@ $(function() {
     });
 });
 
-/* 关于 */
+/* Over */
 function showAbout(){
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -150,7 +150,7 @@ function hideAbout(){
     $("#msgbox").fadeOut(200); 
 }
 
-/* Google 测试 */
+/* Google Test */
 function gtest(){
     var img = new Image();
     var timeout = setTimeout(function(){
