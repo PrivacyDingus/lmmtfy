@@ -69,9 +69,9 @@ $(function() {
 
                                 stepTimeout = setTimeout(function () {
                                     if ($(".search-text").attr("data-site") == "google") {
-                                        window.location = 'https://www.google.com.hk/search?q=' + encodeURIComponent(query);
+                                        window.location = 'https://www.mojeek.com/search?q=' + encodeURIComponent(query);
                                     } else {
-                                        window.location = 'https://www.loli.cab/search?q=' + encodeURIComponent(query);
+                                        window.location = 'https://www.mojeek.com/search?q=' + encodeURIComponent(query);
                                     }
                                 }, 1000);
                             });
@@ -102,7 +102,7 @@ $(function() {
             $tips.html('<span style="color: red">搜了个寂寞？</span>');
             $kw.val('');
         } else {
-            $tips.html('↓↓↓ 复制下面的链接，教伸手党使用谷歌');
+            $tips.html("↓↓↓ Copy this and send it to the person you''re Mojeek'ing for");
             $('#output').fadeIn();
             $urlOutput.val(window.location.origin + window.location.pathname + '?q=' + Base64.encode(question)).focus().select();
         }
@@ -112,7 +112,7 @@ $(function() {
     /* 复制结果 */ 
     var clipboard = new ClipboardJS('[data-clipboard-target]');
     clipboard.on('success', function(e) {
-        $tips.html('<span style="color: #4caf50">复制成功! 赶紧把链接甩给伸手党们!</span>');
+        $tips.html('<span style="color: #4caf50">Copied to clipboard, now send it to the seeker!</span>');
     });
     clipboard.on('error', function(e) {
         $tips.html('<span style="color: red">复制失败，请手动复制</span>');
@@ -129,9 +129,9 @@ $(function() {
     /* 手气不错 */ 
     $('#search2').on('click', function(){
         if ($(".search-text").attr("data-site") == "google") {
-            window.location = 'https://www.google.com.hk/search?q=' + encodeURIComponent($('#kw').val());
+            window.location = 'https://www.mojeek.com/search?q=' + encodeURIComponent($('#kw').val());
         } else {
-            window.location = 'https://www.loli.cab/search?q=' + encodeURIComponent($('#kw').val());
+            window.location = 'https://www.mojeek.com/search?q=' + encodeURIComponent($('#kw').val());
         }
     });
 });
