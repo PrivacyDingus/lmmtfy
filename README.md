@@ -2,34 +2,36 @@
 <img src="https://github.com/xb2016/lmgtfy/raw/master/lmgtfy.png" alt="让我帮你谷歌一下">
 </p>
 
-<h3 align="center"> 「Let Me Google That For You」</h3>
+<h3 align="center"> 「Let Me Mojeek That For You」</h3>
 
 <p align="center">
 <img alt="Author" src="https://img.shields.io/badge/Author-Moedog-blue.svg?style=flat-square">
 <img alt="License" src="https://img.shields.io/github/license/xb2016/lmgtfy.svg?style=flat-square"/>
 </p>
 
-## 基本介绍
+## Basic Introduction
 
-创意来自于「让我帮你百度一下」，这玩意出来好久了，同时，「让我帮你谷歌一下」也有，不过有各种不方便，要么就是年代久远，用的旧样式，要么就是境内访问有点难度。所以抽空改了一个出来。
+The idea came from "Let me help you Baidu", this thing came out for a long time, at the same time, "Let me help you Google" also have, but there are all kinds of inconvenience, either is the age of the old style, or is the territory access is a little difficult. So took the time to change one out.
 
-感谢 [Sukka](https://github.com/SukkaW) 提供网络环境判断方案。
+Thanks to [Sukka](https://github.com/SukkaW) for providing the network environment judgment program.
 
-基于这两个项目：[https://github.com/bangbang93/lmbtfy.cn](https://github.com/bangbang93/lmbtfy.cn) 以及 [https://github.com/mengkunsoft/lmbtfy](https://github.com/mengkunsoft/lmbtfy)
+Based on these two programs: [https://github.com/bangbang93/lmbtfy.cn](https://github.com/bangbang93/lmbtfy.cn) and [https://github.com/mengkunsoft/lmbtfy ](https://github.com/mengkunsoft/lmbtfy)
 
-演示站点：[https://moedog.org/tools/google/](https://moedog.org/tools/google/)
+Demo site: [https://moedog.org/tools/google/](https://moedog.org/tools/google/)
 
-## 食用注意
+## Notes for consumption
 
-首先，环境需要 PHP，用于生成短链接用的；其次，要提到这个程序的一个优点，它可以判断使用者的网络能不能访问谷歌，如果不能，则调用反代站点访问。
+First of all, the environment needs PHP, which is used to generate short links; secondly, it is important to mention one of the advantages of this program, which can determine whether the user's network can access Mojeek or not, and if it can't, then call the reverse generation site to access it.
 
-但是这个反代站需要程序搭建者自己准备了，本程序自带的只能由我站调用。
+But this anti-generation site needs to program builders to prepare their own, this program comes with only by my station call.
 
-编辑 lmgtfy.js ，把 www.loli.cab 换成你自己的谷歌反代链接，实在没有就换成 www.google.com 吧。
+Edit lmgtfy.js, replace www.loli.cab with your own Google antisite link, or www.google.com if you don't have it.
 
-## 捐赠
+## Donate
 
 - [https://pay.fczbl.vip](https://pay.fczbl.vip)
+
+*Translated with DeepL.com (free version)*
 
 ## Author
 
