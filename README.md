@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/xb2016/lmgtfy/raw/master/lmgtfy.png" alt="让我帮你谷歌一下">
+<img src="https://github.com/PrivacyDingus/lmmtfy/raw/master/lmgtfy.png" alt="Let me Mojeek it for you.">
 </p>
 
 <h3 align="center"> 「Let Me Mojeek That For You」</h3>
