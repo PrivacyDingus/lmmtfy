@@ -102,7 +102,7 @@ $(function() {
             $tips.html('<span style="color: red">Looking for something？</span>');
             $kw.val('');
         } else {
-            $tips.html("↓↓↓ Copy this and send it to the person you''re Mojeek'ing for");
+            $tips.html("↓↓↓ Copy this and send it to the person you're Mojeek'ing for");
             $('#output').fadeIn();
             $urlOutput.val(window.location.origin + window.location.pathname + '?q=' + Base64.encode(question)).focus().select();
         }
